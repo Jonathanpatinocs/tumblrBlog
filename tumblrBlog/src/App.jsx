@@ -3,15 +3,28 @@ import { useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
-  const [data, setData] = useState()
-  useEffect(() => {
-    fetch("https://api.tumblr.com/v2/blog/johnyyy0-0.tumblr.com/posts/photo?api_key=I55g8wzJz8ABvAtEQWkGEsOr3IMZsKY4OvDsnHebXne2KI9aeX")
-    .then(res => res.json())
-    .then(data => setData(data))
-    
-    
-  }, [])
-  console.log(data);
+
+  const [data, setData] = useState([])
+    useEffect(()=> {
+      async function fetchData() {
+        console.log(import.meta.env.VITE_API_URL)
+        try {
+          const response = await fetch(`${import.meta.env.VITE_API_URL}posts`)
+          if (!response.ok) {
+            throw new Error('Network response is not ok')
+          }
+          const result = await response.json()
+          console.log(result);
+          setData(result)
+        }
+        catch (error) {
+          console.error('Error fetching data:', error)
+        }
+      }
+
+      fetchData()
+      
+    },[])
   
 
   
