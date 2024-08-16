@@ -21,26 +21,19 @@ def clientfunc():
         TOKEN,
         TOKEN_SECRET
     )
-    
+    dashboard = client.dashboard
     posts = client.posts('johnyyy0-0.tumblr.com')
-    print(posts)
+    print(dashboard)
+    
+    return(
+        jsonify(posts)
+    )
 
 
 
-clientfunc()
+
 # Make the request
 
-
-def posts(): 
-    return jsonify(
-        {
-            "posts": [
-                '1',
-                '2',
-                '3'
-            ]
-        }
-    )
 
 if __name__ == "__main__":
     app.run(debug=True, port=8080)
