@@ -6,21 +6,37 @@ import './App.css'
 
 function App() {
   
-  const [posts, setPosts] = useState({})
+  const [posts, setPosts] = useState([{}])
+  const displayPosts = []
 
   const fetchAPI = async () => {
     const response = await axios.get("http://localhost:8080/posts")
-    console.log(response.data.posts)
-    setPosts(response.data.posts)
+    console.log(response.data.posts[0].trail[0].content)
+    displayPosts.push(response.data.posts[0].trail[0].content)
+    setPosts(response.data.posts[0].trail[0].content)
+    for (let i = 1; i < response.data.posts.length; i++) {
+      posts.push(response.data.posts[i].trail[0].content)
+      displayPosts.push(response.data.posts[i].trail[0].content)
+    }
+    
+    
+    console.log(posts)
+    console.log(displayPosts)
+
+    
+    
   }
   useEffect(() => {
     fetchAPI()
   },[])
 
 
+
   return (
     <div>
-      <img src="https://64.media.tumblr.com/9f3ad1f44f4e0808e88532087dd288bc/b744750790624d6b-8f/s640x960/424df352e43c1006eb63ac65f79c9bc4eaba95e5.jpg" alt="" />
+     {displayPosts.map(post => {
+      <div>{post}</div>
+     })}
     </div>
   )
 }
