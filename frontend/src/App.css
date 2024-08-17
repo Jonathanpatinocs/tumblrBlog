@@ -1,0 +1,16 @@
+#posts-container { /* Posts Container  */
+    
+}
+#posts-container > div { /* Post block  */
+
+    margin-bottom: 100px;
+}
+.tmblr-full > img {  /* Posts imgs  */
+    max-width: 500px;
+}
+.tmblr-full {
+    margin: 0;
+}
+#posts-container > div > p {  /* Posts caption  */
+   margin:0;
+}
