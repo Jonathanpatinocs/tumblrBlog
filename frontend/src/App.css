@@ -1,9 +1,9 @@
 #posts-container { /* Posts Container  */
     
 }
-#posts-container > div { /* Post block  */
+.post-block { /* Post block  */
 
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 .tmblr-full > img {  /* Posts imgs  */
     max-width: 500px;
