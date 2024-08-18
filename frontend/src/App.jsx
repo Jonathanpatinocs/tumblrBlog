@@ -24,9 +24,10 @@ function App() {
     postBlock.classList.add('post-block')
     let post = document.createElement('div')
     let date = document.createElement('p')
+    let post_url = response.data.posts[0].post_url
 
     post.innerHTML = response.data.posts[0].trail[0].content
-    date.innerText = response.data.posts[0].date
+    date.innerHTML = `<a href="${post_url}">${response.data.posts[0].date} </a>`
     postBlock.append(post)
     postBlock.append(date)
     postsContainer.append(postBlock)
@@ -39,8 +40,9 @@ function App() {
       postBlock.classList.add('post-block')
       let post = document.createElement('div')
       let date = document.createElement('p')
+      let post_url = response.data.posts[i].post_url
 
-      date.innerText = dates[i]
+      date.innerHTML = `<a href="${post_url}">${response.data.posts[0].date} </a>`
       post.classList.add('post')
       post.innerHTML = posts[i]
 

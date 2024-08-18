@@ -22,7 +22,7 @@ def clientfunc():
         TOKEN_SECRET
     )
     dashboard = client.dashboard
-    posts = client.posts('johnyyy0-0.tumblr.com')
+    posts = client.posts('johnyyy0-0.tumblr.com', notes_info=True)
     print(dashboard)
     
     return(
