@@ -78,8 +78,14 @@ function App() {
           <li><a href="https://open.spotify.com/user/johnypatino?si=e27bb26d99714cfd">music</a></li>
         </ul>
       </div>
-      <div id='posts-container'></div>
-      
+      <div id='content'>
+        <div id='posts-container'></div>
+        <div id='right'>
+          <p>recent music i like</p>
+          
+          <iframe src="https://open.spotify.com/embed/playlist/44zZLic18Q0aVfWZJXTi36?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </div>
       
     </div>
   )

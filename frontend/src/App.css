@@ -28,4 +28,32 @@ body {
 #links a{
     color: purple;
 }
+#posts-container {
+    min-width: 500px;
+    border: 0px solid ;
+    
+    padding: 15px;
+    height: 100vh;
+    overflow-x: auto;
+}
 
+#content {
+    width: 100vw;
+    display: flex;
+    gap: 100px;
+}
+#right > p {
+    margin: 0;
+}
+iframe {
+    
+}
+
+@media only screen and (max-width: 600px) {
+    #content {
+        gap: 50px;
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+    }
+  }
