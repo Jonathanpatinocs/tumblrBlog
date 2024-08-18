@@ -24,7 +24,7 @@ function App() {
     let date = document.createElement('p')
 
     post.innerHTML = response.data.posts[0].trail[0].content
-    date.innerText = 'posted: ' + response.data.posts[0].date
+    date.innerText = response.data.posts[0].date
     postBlock.append(post)
     postBlock.append(date)
     postsContainer.append(postBlock)
@@ -37,8 +37,8 @@ function App() {
       postBlock.classList.add('post-block')
       let post = document.createElement('div')
       let date = document.createElement('p')
-      
-      date.innerText = 'posted: ' + dates[i]
+
+      date.innerText = dates[i]
       post.classList.add('post')
       post.innerHTML = posts[i]
 
@@ -64,6 +64,7 @@ function App() {
   return (
     <div>
       <div id='posts-container'></div>
+      <img src="http://api.tumblr.com/v2/blog/johnyyy0-0.tumblr.com/avatar/48" alt="" />
     </div>
   )
 }
