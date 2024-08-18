@@ -6,13 +6,15 @@ import './App.css'
 
 function App() {
   
+  
   const [posts, setPosts] = useState([{}])
   const [dates, setDates] = useState([{}])
 
   const fetchAPI = async () => {
     const postsContainer = document.getElementById('posts-container')
     const response = await axios.get("http://localhost:8080/posts")
-    console.log(response.data.posts[1].date)
+    console.log(response.data.posts[1])
+    
 
 
     setPosts(response.data.posts[0].trail[0].content)
@@ -55,16 +57,28 @@ function App() {
     
     
   }
+  
   useEffect(() => {
     fetchAPI()
+    
   },[])
 
 
 
   return (
     <div>
+      <div id='header'>
+        
+      </div>
+      <div id='links'>
+        <ul>
+          <li><a href="https://johnyyy0-0.tumblr.com/archive">archive</a></li>
+          <li><a href="https://open.spotify.com/user/johnypatino?si=e27bb26d99714cfd">music</a></li>
+        </ul>
+      </div>
       <div id='posts-container'></div>
-      <img src="http://api.tumblr.com/v2/blog/johnyyy0-0.tumblr.com/avatar/48" alt="" />
+      
+      
     </div>
   )
 }
