@@ -1,6 +1,6 @@
 import  { useState, useEffect } from 'react'
 import axios from 'axios'
-
+import lainIcon from './assets/lain-icon.jpg'
 
 import './App.css'
 
@@ -69,22 +69,27 @@ function App() {
 
   return (
     <div>
-      <div id='header'>
+      <div id='top'>
         
       </div>
-      <div id='links'>
-        <ul>
-          <li><a href="https://johnyyy0-0.tumblr.com/archive">archive</a></li>
-          <li><a href="https://open.spotify.com/user/johnypatino?si=e27bb26d99714cfd">music</a></li>
-        </ul>
+      <div id='header'>
+        <div id='links'>
+          <ul>
+            <li><a href="https://johnyyy0-0.tumblr.com/archive">archive</a></li>
+            <li><a href="https://open.spotify.com/user/johnypatino?si=e27bb26d99714cfd">music</a></li>
+          </ul>
+        </div>
+        <div>
+          <img src={lainIcon} id='lain-icon'/>
+        </div>
       </div>
       <div id='content'>
-        <div id='posts-container'>
-          <p>scroll down \/</p>
-        </div>
-        <div id='right'>
+      <div id='right'>
           <p>august playlist</p>
           <iframe src="https://open.spotify.com/embed/playlist/44zZLic18Q0aVfWZJXTi36?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <div id='posts-container'>
+          <p>scroll down \/</p>
         </div>
       </div>
       
