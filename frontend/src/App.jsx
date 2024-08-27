@@ -1,6 +1,10 @@
 import  { useState, useEffect } from 'react'
 import axios from 'axios'
 import lainIcon from './assets/lain-icon.jpg'
+/* fixed images */
+import treeImage from './assets/tumblrBlogImages/trees.png'
+import darkTree from './assets/tumblrBlogImages/darktrees.png'
+import memeimg from './assets/tumblrBlogImages/real.jpg'
 
 import './App.css'
 
@@ -69,8 +73,12 @@ function App() {
 
   return (
     <div>
+      <div id='images'>
+       <img src={treeImage} alt="" id='treeimg' draggable='true'/>
+       <img src={darkTree} alt="" id='darktrees'/>
+       <img src={memeimg} alt="" id='memeimg'/>
+      </div>
       <div id='top'>
-        
       </div>
       <div id='header'>
         <div id='links'>
@@ -85,7 +93,7 @@ function App() {
       </div>
       <div id='content'>
       <div id='right'>
-          <p>august playlist</p>
+          
           <iframe src="https://open.spotify.com/embed/playlist/44zZLic18Q0aVfWZJXTi36?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
         <div id='posts-container'>

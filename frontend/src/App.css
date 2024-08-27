@@ -97,3 +97,21 @@ iframe {
         height: 90px;
     }
   }
+  #treeimg {
+    width: 300px;
+    position: fixed;
+    top: 400px;
+    left: 1000px;
+  }
+  #darktrees {
+    width: 400px;
+    position: fixed;
+    top:50px;
+    left: 550px;
+  }
+  #memeimg {
+    position: fixed;
+    width: 300px;
+    left: 1100px;
+    top: 100px;
+  }
