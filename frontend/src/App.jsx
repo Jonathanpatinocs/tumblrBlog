@@ -17,7 +17,7 @@ function App() {
   const fetchAPI = async () => {
     const postsContainer = document.getElementById('posts-container')
     const response = await axios.get("http://localhost:8080/posts")
-    console.log(response.data.posts[1])
+    console.log(response.data.posts[0])
     
 
 
